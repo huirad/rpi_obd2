@@ -13,8 +13,8 @@ Connecting to Bluetooth-OBD on my openSUSE laptop
   * `sudo hciconfig hci0 up`
 * Search for the bluetooth dongle
   * `hcitool scan`
-  * This command reports the MAC address of all found BT devices at 00:0B:0D:84:B3:A0
-* Bind the bluetooth donge to a rfcomm device
+  * This command reports the MAC address of all found BT devices, like 00:0B:0D:84:B3:A0
+* Bind the bluetooth dongle to a rfcomm device
   * `sudo rfcomm bind 0 00:0B:0D:84:B3:A0`
   * Now the device /dev/rfcomm0 is created
 * Try to connect to the device
@@ -32,13 +32,13 @@ Sending just a CR repeats the last command?!
 
 AT commands
 * `ATZ` Reset (`ATD` seems to be a synonym)
-  * My OBD dongle will send a version string as response.
+  * Most (all?) OBD2 dongles will send a version string as response
 * `ATDP` Display used protocol (e.g. CAN)
   * Bus connection must be initialized first, e.g. by sending `0100`
 * `ATE0` Disable character echo (default: `ATE1`: character echo on)
 * `ATL0` Disable sending LF after CR (default: `ATL1`: LF is sent after CR)
 * `ATS0` Disable sending spaces between hex characters (default: `ATS1`: spaces are sent between hex characters)
-  * This command is not supported by my OBD dongle (apparently only a cheap ELM327 clone)
+  * This command is not supported by my OBD2 dongle (apparently only a cheap ELM327 clone)
 
 OBD2 data access: 
 The first command sent after power up will initialize the bus connection
@@ -52,9 +52,9 @@ The response format is <SID | 0x04> <PID> <result bytes depending on PID>
 
 The following commands may be useful 
 (see also https://en.wikipedia.org/wiki/OBD-II_PIDs)
-* '0100` List supported PIDs in range 01..1F
+* `0100` List supported PIDs in range 01..1F
   * returns 4 bytes as bitmask
-* `0104' Engine load
+* `0104` Engine load
   * returns 1 byte (A): LOAD_PCT[%] = A*100/255
 * `010C` Engine RPM 
   * returns 2 bytes (A,B): RPM [1/min] = ((A*256)+B)/4
