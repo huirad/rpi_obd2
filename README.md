@@ -14,6 +14,7 @@ Connecting to Bluetooth-OBD on my openSUSE laptop
 * Search for the bluetooth dongle
   * `hcitool scan`
   * This command reports the MAC address of all found BT devices at 00:0B:0D:84:B3:A0
+  * Check offered services with `sdptool browse 00:0B:0D:84:B3:A0`
 * Bind the bluetooth donge to a rfcomm device
   * `sudo rfcomm bind 0 00:0B:0D:84:B3:A0`
   * Now the device /dev/rfcomm0 is created
@@ -23,7 +24,9 @@ Connecting to Bluetooth-OBD on my openSUSE laptop
   * (call as sudo if you are not member of group dialout)
 * TODO: CHECK what's the purpose of 
   * `rfcomm connect 0`
+  * `l2ping -c3  00:0B:0D:84:B3:A0`
 * TODO: CHECK how to enter the PIN when there is no GUI (KDE asked me for the PIN ...)
+  * ?? ==> http://www.linurs.org/linux/Bluetooth.html
 
 Useful ELM327 commands
 ----------------------
