@@ -33,13 +33,15 @@ extern "C" {
 /**
  * Initialize the OBD2 access.
  * Must be called before using any of the other functions.
- * @param obd2_device the name of the device on which the OBD2 adapter is attached
+ * @param obd2_device [IN] the name of the device on which the OBD2 adapter is attached
+ * @param baudrate [IN] baud rate (see definitions in <asm/termbits.h>) 
+ * @note for bluetooth SPP connections the baudrate is normally ignored
  * @return true on when the OBD2 _dongle_ could be accessed.
  * @note this command does _not_ check the connection to the vehicle OBD bus 
  *   as this may depend on other conditions (such as ignition state) 
  * @note CHECK this may block for a while as bluetooth connection setup can take up to 3.5 sec
  */
-bool obd2_init(const char* obd2_device); 
+bool obd2_init(const char* obd2_device, unsigned int baudrate); 
 
 /**
  * Release the OBD2 access.

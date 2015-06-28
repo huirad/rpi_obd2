@@ -27,6 +27,7 @@ Connecting to Bluetooth-OBD on my openSUSE laptop
   * `l2ping -c3  00:0B:0D:84:B3:A0`
 * TODO: CHECK how to enter the PIN when there is no GUI (KDE asked me for the PIN ...)
   * ?? ==> http://www.linurs.org/linux/Bluetooth.html
+  * ?? ==> https://en.wikibooks.org/wiki/Linux_Guide/Linux_and_Bluetooth
 
 Useful ELM327 commands
 ----------------------
@@ -81,4 +82,6 @@ References
 * [SDB:ELM327_based_ODB2_scan_tool](https://en.opensuse.org/SDB:ELM327_based_ODB2_scan_tool)
 
 ?? https://www.modmypi.com/blog/installing-the-raspberry-pi-nano-bluetooth-dongle
+?? http://unix.stackexchange.com/questions/92255/how-do-i-connect-and-send-data-to-a-bluetooth-serial-port-on-linux
+?? http://stackoverflow.com/questions/15028953/sending-binary-data-over-bluetooth-rfcomm-spp-converts-0x0a-to-0x0d-0x0a
 
