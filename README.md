@@ -28,6 +28,8 @@ Connecting to Bluetooth-OBD on my openSUSE laptop
 * TODO: CHECK how to enter the PIN when there is no GUI (KDE asked me for the PIN ...)
   * ?? ==> http://www.linurs.org/linux/Bluetooth.html
   * ?? ==> https://en.wikibooks.org/wiki/Linux_Guide/Linux_and_Bluetooth
+  * !!?? ==> https://www.raspberrypi.org/forums/viewtopic.php?f=53&t=53299 ==> https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=87138&p=752712#p752712
+  * !!!! bluez-simple-agent  ==> http://fabcirablog.weebly.com/blog/reading-a-cars-obdii-port-with-a-raspberry-pi || http://gersic.com/connecting-your-raspberry-pi-to-a-bluetooth-obd-ii-adapter/ || https://mobileandpi.wordpress.com/tag/bluez-simple-agent/ || http://bobbylindsey.com/blog/?p=14 || http://diyapps.blogspot.de/2015/02/eclipse-open-iot-challenge-obd-part1.html + http://diyapps.blogspot.de/2015/02/eclipse-open-iot-challenge-obd-part2.html
 
 Useful ELM327 commands
 ----------------------
